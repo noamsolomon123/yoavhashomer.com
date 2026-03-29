@@ -208,44 +208,50 @@ function initTilt() {
   });
 }
 
-// --- Lead Form Handler ---
+// --- Hero Lead Form Submission ---
 function initLeadForm() {
-  const form = document.getElementById('leadForm');
-  const input = document.getElementById('leadEmail');
-  const message = document.getElementById('leadMessage');
-
+  const form = document.getElementById('heroLeadForm');
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = input.value.trim();
+    const name = form.parentName.value.trim();
+    const phone = form.phone.value.trim();
 
-    if (!email) return;
+    if (!name || !phone) return;
 
-    message.textContent = 'שולח...';
-    message.className = 'signup-message';
+    // Normalize phone: strip leading 0, add 972 prefix if needed
+    let normalized = phone.replace(/[\s\-()]/g, '');
+    if (normalized.startsWith('0')) normalized = '972' + normalized.slice(1);
+    if (!normalized.startsWith('972')) normalized = '972' + normalized;
+
+    const submitBtn = form.querySelector('.btn-lead-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'שולח...';
+    submitBtn.disabled = true;
 
     try {
-      const response = await fetch('/api/leads/signup', {
+      // Try to send lead to backend
+      const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ name, phone: normalized })
       });
-
-      const data = await response.json();
-
-      if (data.success) {
-        message.textContent = '✅ נרשמת בהצלחה! נשלח לך עדכון בקרוב.';
-        message.classList.add('success');
-        input.value = '';
-      } else {
-        message.textContent = '❌ ' + (data.error || 'חלה שגיאה, נסו שוב.');
-        message.classList.add('error');
-      }
-    } catch (err) {
-      message.textContent = '❌ שגיאת תקשורת. נסו שוב.';
-      message.classList.add('error');
+      if (!res.ok) throw new Error('Server error');
+    } catch (_) {
+      // Fallback: redirect to WhatsApp with prefilled message
     }
+
+    // Always redirect to WhatsApp as final step
+    const waText = encodeURIComponent(`היי, אני ${name} ואני רוצה לנסות את יואב השומר. המספר שלי: ${phone}`);
+    window.open(`https://wa.me/972559994876?text=${waText}`, '_blank');
+
+    submitBtn.textContent = 'נשלח בהצלחה!';
+    setTimeout(() => {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+      form.reset();
+    }, 3000);
   });
 }
 

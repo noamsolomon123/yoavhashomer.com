@@ -4,7 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>יואב השומר — הגנה חכמה על ילדיכם בוואטסאפ</title>
+  <meta name="description" content="יואב השומר מנתח כל הודעה בוואטסאפ של ילדכם בזמן אמת ומתריע רק כשיש סכנה. הפתרון הישראלי הראשון שמבין עברית באמת.">
+  <meta property="og:title" content="יואב השומר — הגנה חכמה על ילדיכם בוואטסאפ">
+  <meta property="og:description" content="מנתח הודעות, תמונות והקלטות בעברית בזמן אמת. מתריע רק כשיש סכנה אמיתית. חינם בתקופת הפיילוט.">
+  <meta property="og:image" content="https://yoavhashomer.com/assets/yoavROBOT.png">
+  <meta property="og:url" content="https://yoavhashomer.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:site_name" content="יואב השומר">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="יואב השומר — הגנה חכמה על ילדיכם בוואטסאפ">
+  <meta name="twitter:description" content="מנתח הודעות בוואטסאפ של ילדכם בזמן אמת ומתריע כשיש סכנה. חינם.">
+  <meta name="twitter:image" content="https://yoavhashomer.com/assets/yoavROBOT.png">
+  <link rel="canonical" href="https://yoavhashomer.com/">
+  <link rel="icon" type="image/png" href="assets/yoavhead.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -24,501 +39,447 @@
         <li><a href="#faq">שאלות נפוצות</a></li>
       </ul>
       <div class="navbar-cta">
+        <a href="login.html" class="btn btn-secondary btn-small">כניסה</a>
         <a href="#pricing" class="btn btn-primary btn-small">התחילו עכשיו</a>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="פתח תפריט" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </nav>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          הפתרון הישראלי הראשון שמבין עברית באמת
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        🇮🇱 הפתרון הישראלי הראשון שמבין עברית באמת
+      </div>
+      <h1>אתם לא יכולים להיות שם<br>בכל רגע. <span>יואב כן.</span></h1>
+      <p class="hero-subtitle">
+        יואב השומר מתחבר לוואטסאפ של ילדכם ומנתח כל הודעה, תמונה והקלטה
+        בזמן אמת — ומתריע רק כשיש סכנה אמיתית. בריונות, סמים, פדופיליה,
+        אנשי קשר חשודים — הכל מזוהה באופן אוטומטי.
+      </p>
+      <!-- Inline Lead Capture Form -->
+      <form class="hero-lead-form" id="heroLeadForm" autocomplete="off">
+        <div class="lead-form-row">
+          <input type="text" name="parentName" placeholder="השם שלכם" required class="lead-input">
+          <input type="tel" name="phone" placeholder="מספר וואטסאפ (למשל 0559994876)" required class="lead-input" dir="ltr">
+          <button type="submit" class="btn btn-primary btn-lead-submit">הצטרפו בחינם</button>
         </div>
-        <h1>אתם לא יכולים להיות שם<br>בכל רגע. <span>יואב כן.</span></h1>
-        <p class="hero-subtitle">
-          יואב השומר מתחבר לוואטסאפ של ילדכם ומנתח כל הודעה, תמונה והקלטה
-          בזמן אמת — ומתריע רק כשיש סכנה אמיתית.
-        </p>
-        <div class="pilot-notice">
-          אנו כרגע בשלב פיילוט חינמי. השאירו אימייל כדי להירשם ולקבל את הקישור להפעלת יואב:
-        </div>
-        <div class="hero-signup">
-          <form id="leadForm" class="signup-form">
-            <label for="leadEmail" class="sr-only">האימייל שלכם</label>
-            <input type="email" id="leadEmail" placeholder="האימייל שלכם..." required>
-            <button type="submit" class="btn btn-primary">הצטרפו לפיילוט בחינם</button>
-          </form>
-          <div id="leadMessage" class="signup-message"></div>
-        </div>
-        <div class="hero-actions mt-24">
-          <a href="https://wa.me/972559994876?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%AA%D7%97%D7%99%D7%9C" target="_blank" rel="noopener" class="btn btn-secondary btn-small">או שלחו הודעה ליואב בוואטסאפ במקום</a>
-          <a href="#how-it-works" class="btn btn-secondary btn-small">איך זה עובד? →</a>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">99.2%</div>
-              <div class="stat-label">דיוק בזיהוי עברית</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">&lt;3 שניות</div>
-              <div class="stat-label">מקבלת ההודעה ועד ההתראה</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">ניטור רציף — גם כשאתם ישנים</div>
-            </div>
+        <p class="lead-form-note">ללא כרטיס אשראי. ללא התחייבות. תקבלו הודעת וואטסאפ תוך דקה.</p>
+      </form>
+      <div class="hero-actions hero-actions-secondary">
+        <a href="login.html?tab=register" class="btn btn-secondary btn-large">או הירשמו עם אימייל</a>
+        <a href="#how-it-works" class="btn btn-secondary btn-large">איך זה עובד? ←</a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">99.2%</div>
+            <div class="stat-label">דיוק בזיהוי עברית</div>
           </div>
-        </div>
-
-        <!-- Trust badges -->
-        <div class="trust-badges">
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            הצפנה מקצה לקצה
+          <div class="stat-item">
+            <div class="stat-number">&lt;3 שניות</div>
+            <div class="stat-label">מקבלת ההודעה ועד ההתראה</div>
           </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            פותח בישראל
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-            ללא התקנה על הטלפון
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"/><line x1="18" x2="12" y1="9" y2="15"/><line x1="12" x2="18" y1="9" y2="15"/></svg>
-            ללא גישה לתמונות פרטיות
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">ניטור רציף — גם כשאתם ישנים</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Pain Section -->
-    <section class="section pain-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>הסכנות שהורים לא רואים</h2>
-          <p>המספרים מדברים בעד עצמם — ורוב ההורים מגלים מאוחר מדי</p>
+      <!-- Trust badges -->
+      <div class="trust-badges">
+        <div class="trust-item">🔒 הצפנה מקצה לקצה</div>
+        <div class="trust-item">🇮🇱 פותח בישראל</div>
+        <div class="trust-item">📱 ללא התקנה על הטלפון</div>
+        <div class="trust-item">❌ ללא גישה לתמונות פרטיות</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Section -->
+  <section class="section pain-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>הסכנות שהורים לא רואים</h2>
+        <p>המספרים מדברים בעד עצמם — ורוב ההורים מגלים מאוחר מדי</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-number">64%</div>
+          <div class="pain-text">מהילדים בישראל חווים בריונות ברשת לפני גיל 14</div>
         </div>
-        <div class="pain-grid">
-          <div class="pain-card">
-            <div class="pain-number">64%</div>
-            <div class="pain-text">מהילדים בישראל חווים בריונות ברשת לפני גיל 14</div>
-          </div>
-          <div class="pain-card">
-            <div class="pain-number">1 מ-5</div>
-            <div class="pain-text">ילדים מקבלים הודעות ממבוגרים לא מוכרים</div>
-          </div>
-          <div class="pain-card">
-            <div class="pain-number">73%</div>
-            <div class="pain-text">מהילדים לא מספרים להורים על בריונות שחוו</div>
-          </div>
-          <div class="pain-card">
-            <div class="pain-number">89%</div>
-            <div class="pain-text">מההורים לא יודעים מה קורה בוואטסאפ של ילדם</div>
-          </div>
+        <div class="pain-card">
+          <div class="pain-number">1 מ-5</div>
+          <div class="pain-text">ילדים מקבלים הודעות ממבוגרים לא מוכרים</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-number">73%</div>
+          <div class="pain-text">מהילדים לא מספרים להורים על בריונות שחוו</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-number">89%</div>
+          <div class="pain-text">מההורים לא יודעים מה קורה בוואטסאפ של ילדם</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Features -->
-    <section class="section features-section" id="features">
-      <div class="container">
-        <div class="section-header">
-          <h2>ניתוח מקיף - לא רק טקסט</h2>
-          <p>יואב מנתח הודעות טקסט, הודעות קוליות, ותמונות — הכל בעברית, הכל בזמן אמת</p>
+  <!-- Features -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>ניתוח מקיף — לא רק טקסט</h2>
+        <p>יואב מנתח הודעות טקסט, הודעות קוליות, ותמונות — הכל בעברית, הכל בזמן אמת</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon amber">💬</div>
+          <h3>ניתוח הודעות טקסט</h3>
+          <p>מודל HeBERT מאומן על אלפי הודעות בעברית. מזהה בריונות, איומים, שפה מינית, סמים — גם בסלנג, קיצורים ואימוג'ים</p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card bento-span-2">
-            <div class="feature-icon amber">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <h3>ניתוח הודעות טקסט</h3>
-            <p>מערכת מאומנת על אלפי הודעות בעברית. מזהה בריונות, איומים, שפה מינית, סמים — גם בסלנג, קיצורים ואימוג'ים</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
-            </div>
-            <h3>ניתוח הודעות קוליות</h3>
-            <p>המרת הקלטות לטקסט ואז ניתוח תוכן אוטומטי — ילדים שולחים קולי כי הם חושבים שזה "בטוח"</p>
-            <span class="premium-tag">פרימיום</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon green">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
-            </div>
-            <h3>ניתוח תמונות</h3>
-            <p>זיהוי תמונות פוגעניות וחילוץ טקסט מצילומי מסך — כי הרבה בריונות קורית דרך תמונות</p>
-            <span class="premium-tag">פרימיום</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon amber">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
-            </div>
-            <h3>הבנת הקשר מתקדמת</h3>
-            <p>כשמזוהה תוכן חשוד, המערכת בודקת את ההקשר — האם זו בדיחה? ציטוט משיר? או איום אמיתי?</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3>זיהוי אנשי קשר חדשים</h3>
-            <p>התראה כשמספר לא מוכר שולח הודעה לילדכם. מבוגרים שיוצרים קשר עם ילדים — אתם צריכים לדעת</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon green">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
-            </div>
-            <h3>לוח בקרה להורים</h3>
-            <p>ראו התראות, אנשי קשר, סטטיסטיקות, וציון בטיחות — הכל בלוח בקרה נוח ומובן</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon blue">🎤</div>
+          <h3>ניתוח הודעות קוליות</h3>
+          <p>המרת הקלטות לטקסט באמצעות Google Speech-to-Text ואז ניתוח תוכן — ילדים שולחים קולי כי הם חושבים שזה "בטוח"</p>
+          <span class="premium-tag">פרימיום</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green">📸</div>
+          <h3>ניתוח תמונות</h3>
+          <p>Google Vision AI מזהה תמונות פוגעניות ומחלץ טקסט מצילומי מסך — כי הרבה בריונות קורית דרך תמונות</p>
+          <span class="premium-tag">פרימיום</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber">🧠</div>
+          <h3>הבנת הקשר עם Gemini AI</h3>
+          <p>כשהמודל מזהה תוכן חשוד, Gemini AI בודק את ההקשר — האם זו בדיחה? ציטוט משיר? או איום אמיתי?</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue">👤</div>
+          <h3>זיהוי אנשי קשר חדשים</h3>
+          <p>התראה כשמספר לא מוכר שולח הודעה לילדכם. מבוגרים שיוצרים קשר עם ילדים — אתם צריכים לדעת</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green">📊</div>
+          <h3>לוח בקרה להורים</h3>
+          <p>ראו התראות, אנשי קשר, סטטיסטיקות, וציון בטיחות — הכל בלוח בקרה נוח ומובן</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- How it Works -->
-    <section class="section how-it-works" id="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <h2>הגדרה ב-3 דקות. בלי ידע טכני.</h2>
-          <p>אין מה להתקין על הטלפון של הילד. הכל עובד דרך וואטסאפ.</p>
+  <!-- How it Works -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>הגדרה ב-3 דקות. בלי ידע טכני.</h2>
+        <p>אין מה להתקין על הטלפון של הילד. הכל עובד דרך וואטסאפ.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1️⃣</div>
+          <h4>הירשמו בחינם</h4>
+          <p>אימות אימייל מהיר. ללא כרטיס אשראי.</p>
         </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h4>סרקו QR מהטלפון של הילד</h4>
-            <p>בדיוק כמו WhatsApp Web — ילדכם ממשיך להשתמש רגיל.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h4>יואב מתחיל לנטר</h4>
-            <p>כל הודעה נסרקת. אתם מקבלים התראה רק כשצריך.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h4>קבלו התראות לוואטסאפ שלכם</h4>
-            <p>הודעה עם פרטים, דירוג חומרה, ואפשרות חסימה.</p>
-          </div>
+        <div class="step">
+          <div class="step-number">2️⃣</div>
+          <h4>סרקו QR מהטלפון של הילד</h4>
+          <p>בדיוק כמו WhatsApp Web — ילדכם ממשיך להשתמש רגיל.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3️⃣</div>
+          <h4>יואב מתחיל לנטר</h4>
+          <p>כל הודעה נסרקת. אתם מקבלים התראה רק כשצריך.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4️⃣</div>
+          <h4>קבלו התראות לוואטסאפ שלכם</h4>
+          <p>הודעה עם פרטים, דירוג חומרה, ואפשרות חסימה.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- How Avner Analyzes -->
-    <section class="section analysis-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>4 רמות ניתוח — דיוק מקסימלי</h2>
-          <p>כל הודעה עוברת מערכת סינון רב-שכבתית כדי למזער התראות שווא</p>
+  <!-- How Avner Analyzes -->
+  <section class="section analysis-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>4 רמות ניתוח — דיוק מקסימלי</h2>
+        <p>כל הודעה עוברת מערכת סינון רב-שכבתית כדי למזער התראות שווא</p>
+      </div>
+      <div class="analysis-pipeline">
+        <div class="pipeline-step">
+          <div class="pipeline-icon safe">✓</div>
+          <div class="pipeline-content">
+            <h4>רמה 0 — בטוח</h4>
+            <p>הודעה רגילה. לא נשלחת התראה. ההורים לא מוטרדים.</p>
+          </div>
+          <div class="pipeline-example">"מה קורה, נתראה אחרי בית ספר?"</div>
         </div>
-        <div class="analysis-pipeline">
-          <div class="pipeline-step">
-            <div class="pipeline-icon safe">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="pipeline-content">
-              <h4>רמה 0 — בטוח</h4>
-              <p>הודעה רגילה. לא נשלחת התראה. ההורים לא מוטרדים.</p>
-            </div>
-            <div class="pipeline-example">"מה קורה, נתראה אחרי בית ספר?"</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon low">!</div>
+          <div class="pipeline-content">
+            <h4>רמה 1 — דורש תשומת לב</h4>
+            <p>תוכן שעשוי להיות בעייתי. נשמר בלוג, נשלחת התראה רכה.</p>
           </div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon low">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            </div>
-            <div class="pipeline-content">
-              <h4>רמה 1 — דורש תשומת לב</h4>
-              <p>תוכן שעשוי להיות בעייתי. נשמר בלוג, נשלחת התראה רכה.</p>
-            </div>
-            <div class="pipeline-example">"אתה נורא מעצבן, תפסיק"</div>
+          <div class="pipeline-example">"אתה נורא מעצבן, תפסיק"</div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon medium">⚠</div>
+          <div class="pipeline-content">
+            <h4>רמה 2 — לא הולם</h4>
+            <p>תוכן פוגעני שדורש תשומת לב הורית. Gemini AI בודק הקשר.</p>
           </div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon medium">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-            </div>
-            <div class="pipeline-content">
-              <h4>רמה 2 — לא הולם</h4>
-              <p>תוכן פוגעני שדורש תשומת לב הורית. המערכת בודקת הקשר.</p>
-            </div>
-            <div class="pipeline-example">"אתה מפגר ואף אחד לא אוהב אותך"</div>
+          <div class="pipeline-example">"אתה מפגר ואף אחד לא אוהב אותך"</div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon high">🚨</div>
+          <div class="pipeline-content">
+            <h4>רמה 3 — דחוף</h4>
+            <p>סכנה מיידית. התראה מיידית להורים עם כל הפרטים.</p>
           </div>
-          <div class="pipeline-step">
-            <div class="pipeline-icon high">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-            </div>
-            <div class="pipeline-content">
-              <h4>רמה 3 — דחוף</h4>
-              <p>סכנה מיידית. התראה מיידית להורים עם כל הפרטים.</p>
-            </div>
-            <div class="pipeline-example">"יש לי גראס, בוא ננסה" / "תתאבד"</div>
-          </div>
+          <div class="pipeline-example">"יש לי גראס, בוא ננסה" / "תתאבד"</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Pricing / Pilot -->
-    <section class="section pricing-section" id="pricing">
-      <div class="container">
-        <div class="section-header">
-          <h2>כרגע — חינם לחלוטין</h2>
-          <p>יואב השומר נמצא בשלב פיילוט. הצטרפו עכשיו וקבלו גישה מלאה בחינם.</p>
-        </div>
-        <div class="pricing-grid">
-          <div class="pricing-card featured">
-            <div class="pricing-badge">🎁 פיילוט חינם</div>
-            <h3>גישה מלאה</h3>
-            <p class="text-muted">כל הפיצ'רים — בלי תשלום</p>
-            <div class="price">חינם<span> לתקופת הפיילוט</span></div>
-            <div class="price-note">ללא כרטיס אשראי · ללא התחייבות</div>
-            <ul class="pricing-features">
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> ניטור ילד אחד</li>
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> ניתוח טקסט AI בעברית</li>
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> זיהוי אנשי קשר חדשים</li>
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> התראות וואטסאפ מיידיות</li>
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> מילות מפתח מותאמות</li>
-              <li><span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> לוח בקרה להורים</li>
-            </ul>
-            <a href="#leadForm" class="btn btn-primary w-full">הצטרפו לרשימת ההמתנה</a>
-          </div>
+  <!-- Pricing / Pilot -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>כרגע — חינם לחלוטין</h2>
+        <p>יואב השומר נמצא בשלב פיילוט. הצטרפו עכשיו וקבלו גישה מלאה בחינם.</p>
+      </div>
+      <div class="pricing-grid" style="max-width: 480px; margin: 0 auto;">
+        <div class="pricing-card featured" style="transform: none;">
+          <div class="pricing-badge">🎁 פיילוט חינם</div>
+          <h3>גישה מלאה</h3>
+          <p style="color: var(--text-light);">כל הפיצ'רים — בלי תשלום</p>
+          <div class="price"><s style="font-size: 0.5em; color: var(--text-light);">₪49/חודש</s> חינם<span> לתקופת הפיילוט</span></div>
+          <div class="price-note">ללא כרטיס אשראי · ללא התחייבות</div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✓</span> ניטור ילד אחד</li>
+            <li><span class="check-icon">✓</span> ניתוח טקסט AI בעברית</li>
+            <li><span class="check-icon">✓</span> זיהוי אנשי קשר חדשים</li>
+            <li><span class="check-icon">✓</span> התראות וואטסאפ מיידיות</li>
+            <li><span class="check-icon">✓</span> מילות מפתח מותאמות</li>
+            <li><span class="check-icon">✓</span> לוח בקרה להורים</li>
+          </ul>
+          <a href="login.html?tab=register" class="btn btn-primary" style="width: 100%;">הצטרפו לפיילוט — חינם</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Social Proof / Testimonials -->
-    <section class="section testimonials-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>הורים שכבר מרגישים בטוחים</h2>
+  <!-- Social Proof / Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>הורים שכבר מרגישים בטוחים</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"תוך יומיים גילינו שמישהו מבוגר שלח לבן שלנו הודעות מאוד בעייתיות בפרטי. בלי יואב לא היינו יודעים. מייד חסמנו."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">מ</div>
+            <div>
+              <div class="testimonial-name">מיכל כ.</div>
+              <div class="testimonial-role">אמא לשניים, תל אביב</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">"תוך יומיים גילינו שמישהו מבוגר שלח לבן שלנו הודעות מאוד בעייתיות בפרטי. בלי יואב לא היינו יודעים. מייד חסמנו."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">מ</div>
-              <div>
-                <div class="testimonial-name">מיכל כ.</div>
-                <div class="testimonial-role">אמא לשניים, תל אביב</div>
-              </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"הבן שלי עבר בריונות קשה בקבוצת הכיתה ולא סיפר לנו. יואב זיהה את זה והתריע. ישבנו איתו לשיחה באותו ערב. הציל מצב."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">י</div>
+            <div>
+              <div class="testimonial-name">יוסי ד.</div>
+              <div class="testimonial-role">אבא לשלושה, ירושלים</div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">"הבן שלי עבר בריונות קשה בקבוצת הכיתה ולא סיפר לנו. יואב זיהה את זה והתריע. ישבנו איתו לשיחה באותו ערב. הציל מצב."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">י</div>
-              <div>
-                <div class="testimonial-name">יוסי ד.</div>
-                <div class="testimonial-role">אבא לשלושה, ירושלים</div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-text">"מה שאהבתי זה שזה באמת מבין עברית. כלים אחרים שניסיתי לא תפסו כלום. וההגדרה לקחה 2 דקות — סריקת QR וזהו."</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">ר</div>
-              <div>
-                <div class="testimonial-name">רונית ש.</div>
-                <div class="testimonial-role">אמא לאחת, חיפה</div>
-              </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"מה שאהבתי זה שזה באמת מבין עברית. כלים אחרים שניסיתי לא תפסו כלום. וההגדרה לקחה 2 דקות — סריקת QR וזהו."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ר</div>
+            <div>
+              <div class="testimonial-name">רונית ש.</div>
+              <div class="testimonial-role">אמא לאחת, חיפה</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Comparison -->
-    <section class="section comparison-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>למה יואב ולא פתרון אחר?</h2>
-        </div>
-        <div class="comparison-table-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>תכונה</th>
-                <th class="highlight-col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; vertical-align:text-bottom; margin-left:4px;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-                  יואב השומר
-                </th>
-                <th>אפליקציות מעקב</th>
-                <th>"אני בודק לפעמים"</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>מבין עברית וסלנג</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-              </tr>
-              <tr>
-                <td>ניטור 24/7 אוטומטי</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-              </tr>
-              <tr>
-                <td>ללא התקנת אפליקציה</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-              </tr>
-              <tr>
-                <td>ניתוח הודעות קוליות</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-              </tr>
-              <tr>
-                <td>ניתוח תמונות</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--warning);"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></td>
-              </tr>
-              <tr>
-                <td>הבנת הקשר (לא רק מילים)</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-              </tr>
-              <tr>
-                <td>הילד לא מרגיש מרוגל</td>
-                <td class="highlight-col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success);"><polyline points="20 6 9 17 4 12"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--danger);"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></td>
-              </tr>
-              <tr>
-                <td>מחיר</td>
-                <td class="highlight-col">חינם</td>
-                <td>₪80-200/חודש</td>
-                <td>חינם</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <!-- Comparison -->
+  <section class="section comparison-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>למה יואב ולא פתרון אחר?</h2>
       </div>
-    </section>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>תכונה</th>
+              <th class="highlight-col">🛡️ יואב השומר</th>
+              <th>אפליקציות מעקב</th>
+              <th>"אני בודק לפעמים"</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>מבין עברית וסלנג</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>ניטור 24/7 אוטומטי</td>
+              <td class="highlight-col">✅</td>
+              <td>✅</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>ללא התקנת אפליקציה</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>ניתוח הודעות קוליות</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>ניתוח תמונות</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>⚠️</td>
+            </tr>
+            <tr>
+              <td>הבנת הקשר (לא רק מילים)</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>הילד לא מרגיש מרוגל</td>
+              <td class="highlight-col">✅</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>מחיר</td>
+              <td class="highlight-col">₪49/חודש</td>
+              <td>₪80-200/חודש</td>
+              <td>חינם</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-    <!-- FAQ -->
-    <section class="section faq-section" id="faq">
-      <div class="container">
-        <div class="section-header">
-          <h2>שאלות נפוצות</h2>
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>שאלות נפוצות</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            איך זה עובד בלי להתקין אפליקציה על הטלפון?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">יואב משתמש בטכנולוגיית WhatsApp Web — בדיוק כמו כשאתם פותחים וואטסאפ במחשב. סריקת QR חד-פעמית מהטלפון של הילד מחברת את יואב, והילד ממשיך להשתמש בטלפון כרגיל. אין אפליקציה להתקין, אין אייקון שנראה.</div>
+          </div>
         </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              איך זה עובד בלי להתקין אפליקציה על הטלפון?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">יואב משתמש בטכנולוגיית WhatsApp Web — בדיוק כמו כשאתם פותחים וואטסאפ במחשב. סריקת QR חד-פעמית מהטלפון של הילד מחברת את יואב, והילד ממשיך להשתמש בטלפון כרגיל. אין אפליקציה להתקין, אין אייקון שנראה.</div>
-            </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            האם הילד יכול לראות שיואב מחובר?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">כן — אם הילד נכנס ל"מכשירים מקושרים" הוא יראה חיבור. אנחנו ממליצים על שיח פתוח עם הילדים על בטיחות ברשת ולהסביר שזו הגנה, לא ריגול. המערכת לא מתערבת בשימוש היומיומי שלהם.</div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              האם הילד יכול לראות שיואב מחובר?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">כן — אם הילד נכנס ל"מכשירים מקושרים" הוא יראה חיבור. אנחנו ממליצים על שיח פתוח עם הילדים על בטיחות ברשת ולהסביר שזו הגנה, לא ריגול. המערכת לא מתערבת בשימוש היומיומי שלהם.</div>
-            </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            אתם קוראים את כל ההודעות של הילד?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">לא. המערכת מנתחת הודעות באמצעות AI ומחפשת תוכן מסוכן. אנחנו <strong>לא שומרים</strong> תוכן של הודעות רגילות — רק כשמזוהה סכנה, ההודעה הבעייתית נשלחת להורה. אנחנו לא רואים הודעות רגילות ולא שומרים אותן.</div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              אתם קוראים את כל ההודעות של הילד?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">לא. המערכת מנתחת הודעות באמצעות AI ומחפשת תוכן מסוכן. אנחנו <strong>לא שומרים</strong> תוכן של הודעות רגילות — רק כשמזוהה סכנה, ההודעה הבעייתית נשלחת להורה. אנחנו לא רואים הודעות רגילות ולא שומרים אותן.</div>
-            </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            האם המערכת באמת מבינה עברית?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">כן. יואב מבוסס על מודל HeBERT — מודל שפה שאומן במיוחד על עברית. הוא מבין סלנג ישראלי, קיצורים, ואת הדרך שילדים כותבים. בנוסף, Gemini AI מספק הבנת הקשר מתקדמת כדי להבחין בין בדיחה לאיום אמיתי.</div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              האם המערכת באמת מבינה עברית?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">כן. יואב מבוסס על מודל שפה שאומן במיוחד על עברית. הוא מבין סלנג ישראלי, קיצורים, ואת הדרך שילדים כותבים. בנוסף, מערכת הבנת הקשר המתקדמת מבחינה בין בדיחה לאיום אמיתי.</div>
-            </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            מה קורה כשמזוהה איום?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">תקבלו הודעת וואטסאפ מיידית עם: ההודעה הבעייתית, שם השולח, דירוג חומרה (1-3), ואפשרות לחסום את איש הקשר ישירות מהוואטסאפ שלכם. לאיומים דחופים (רמה 3) ההתראה מגיעה תוך שניות.</div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              מה קורה כשמזוהה איום?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">תקבלו הודעת וואטסאפ מיידית עם: ההודעה הבעייתית, שם השולח, דירוג חומרה (1-3), ואפשרות לחסום את איש הקשר ישירות מהוואטסאפ שלכם. לאיומים דחופים (רמה 3) ההתראה מגיעה תוך שניות.</div>
-            </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            כמה זה עולה?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">כרגע יואב השומר נמצא בשלב פיילוט — וכל הפיצ'רים זמינים <strong>בחינם לחלוטין</strong>. ללא כרטיס אשראי, ללא התחייבות. בעתיד נוסיף תוכניות בתשלום עם פיצ'רים מתקדמים.</div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              כמה זה עולה?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">כרגע יואב השומר נמצא בשלב פיילוט — וכל הפיצ'רים זמינים <strong>בחינם לחלוטין</strong>. ללא כרטיס אשראי, ללא התחייבות. בעתיד נוסיף תוכניות בתשלום עם פיצ'רים מתקדמים.</div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              אפשר לבטל בכל עת?
-              <span class="arrow">▼</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">בוודאי. אין התחייבות ואפשר לבטל בלחיצה אחת. הביטול נכנס לתוקף בסוף תקופת החיוב הנוכחית. אנחנו בטוחים שתרצו להישאר.</div>
-            </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            אפשר לבטל בכל עת?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">בוודאי. אין התחייבות ואפשר לבטל בלחיצה אחת. הביטול נכנס לתוקף בסוף תקופת החיוב הנוכחית. אנחנו בטוחים שתרצו להישאר.</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="section pb-100">
-      <div class="container">
-        <div class="cta-banner">
-          <h2>אל תחכו לשיחה שתגיע מאוחר מדי</h2>
-          <p>הצטרפו להורים שכבר יודעים מה קורה — ומגיבים בזמן.</p>
-          <a href="#leadForm" class="btn btn-primary btn-large">הצטרפו לרשימת ההמתנה</a>
-        </div>
+  <!-- CTA -->
+  <section class="section" style="padding-bottom: 100px;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>אל תחכו לשיחה שתגיע מאוחר מדי</h2>
+        <p>הצטרפו להורים שכבר יודעים מה קורה — ומגיבים בזמן. ההגדרה לוקחת 3 דקות.</p>
+        <a href="login.html?tab=register" class="btn btn-white btn-large">הצטרפו לפיילוט — חינם</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div style="font-size: 1.4rem; font-weight: 800; color: white;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; vertical-align:text-bottom; margin-left:6px;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-            יואב השומר
-          </div>
+          <div style="font-size: 1.4rem; font-weight: 800; color: white;">🛡️ יואב השומר</div>
           <p>הגנה חכמה על ילדיכם בוואטסאפ.<br>מבוסס בינה מלאכותית ישראלית.</p>
         </div>
         <div>
@@ -552,6 +513,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/972559994876?text=היי אני רוצה לנסות את יואב" target="_blank" rel="noopener" class="whatsapp-float" aria-label="שלחו לנו הודעה בוואטסאפ">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.129 6.744 3.047 9.378L1.054 31.29l6.118-1.963A15.91 15.91 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.302 22.602c-.39 1.1-2.274 2.106-3.132 2.2-.798.088-1.806.124-2.916-.184a26.453 26.453 0 01-2.638-0.974c-4.646-2.012-7.682-6.71-7.918-7.022-.234-.312-1.916-2.546-1.916-4.858 0-2.312 1.212-3.45 1.642-3.922.39-.428 1.054-.608 1.688-.608.204 0 .388.01.552.018.468.02.702.048 1.012.782.39.918 1.326 3.23 1.444 3.464.118.234.196.508.04.818-.156.312-.234.506-.468.78-.234.274-.492.612-.702.82-.234.234-.478.488-.204.958.274.468 1.218 2.01 2.616 3.256 1.796 1.6 3.31 2.096 3.778 2.33.468.234.742.196 1.014-.118.274-.312 1.17-1.366 1.482-1.834.312-.468.624-.39 1.054-.234.43.156 2.742 1.292 3.21 1.526.468.234.78.352.898.546.118.196.118 1.118-.274 2.218z"/></svg>
+    <span class="whatsapp-float-text">דברו איתנו</span>
+  </a>
+
+  <!-- Mobile Bottom CTA Bar -->
+  <div class="mobile-bottom-cta">
+    <a href="https://wa.me/972559994876?text=היי אני רוצה לנסות את יואב" class="btn btn-primary mobile-cta-btn">הצטרפו לפיילוט — חינם!</a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
