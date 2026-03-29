@@ -937,6 +937,11 @@ p {
   margin: 0 auto;
 }
 
+.pricing-grid:has(.pricing-card:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+}
+
 .pricing-grid.three-cols {
   grid-template-columns: repeat(3, 1fr);
   max-width: 1000px;
